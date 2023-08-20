@@ -107,17 +107,22 @@ def flightPredict(date, airline, origin, dest):
     feature_scaled = scaler.fit_transform(features_df)
     
     feature_reshaped = feature_scaled.reshape(1,-1)
-    print(feature_reshaped) 
+    #print(feature_reshaped) 
     #features_list = features.reshape(-1,1)
     #print(features)
 
-    delay =  flight_model.predict(feature_reshaped)[0]
-    if delay == 0:
-        outcome = "Your flight is predicted to be on time"
-    else:
-        outcome = "Your flight is predicted to be delayed"
-    return outcome
+    delay =  flight_model.predict_proba(feature_reshaped)[0]
+    print("Delay:", delay)
+    # if delay == 0:
+    #     outcome = "Your flight is predicted to be on time"
+    # else:
+    #     outcome = "Your flight is predicted to be delayed"
+    return "0"
 
+@app.route("/FlightDashboard")
+def showDashboard():
+
+    return render_template('FlightDashboard.html')
 
 
 
