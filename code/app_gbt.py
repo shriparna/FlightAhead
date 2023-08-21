@@ -98,17 +98,13 @@ def flightPredict(timeofday,weekday,season,airline, origin, dest):
     if season == "Winter":
         season_Winter = 1
 
+    #Weather forecast
     ORIGIN_PRCP = 0.5
     ORIGIN_SNOW = 0
     ORIGIN_SNWD = 0
     DEST_PRCP = 0.3
     DEST_SNOW = 4
     DEST_SNWD = 1
-
-
-    # Month = month
-    # Day = day
-    # Weekday = weekday
 
     OP_CARRIER_AA = 0
     OP_CARRIER_DL = 0
@@ -221,17 +217,22 @@ def flightPredict(timeofday,weekday,season,airline, origin, dest):
     #print(features)
 
     delay =  flight_model.predict(features_df)
-    print("Delay:", delay)
-    if delay == 0:
-         outcome = "Your flight is predicted to be on time"
+    delay_probabilities = flight_model.predict_proba(features_df)
+    if delay_probabilities[0][0] > 0.65:
+        outcome = {'flt_delay': "on time", 'probability': delay_probabilities[0][0]}
     else:
-         outcome = "Your flight is predicted to be delayed"
-    return outcome
+        outcome = {'flt_delay': "delayed", 'probability': delay_probabilities[0][1]}
+    # print("Delay:", delay)
+    # if delay == 0:
+    #      outcome = "Your flight is predicted to be on time"
+    # else:
+    #      outcome = "Your flight is predicted to be delayed"
+    return jsonify(outcome)
 
 @app.route("/FlightDashboard")
 def showDashboard():
-
-    return render_template('FlightDashboard.html')
+    outcome = "click the Predict button"
+    return render_template('FlightDashboard.html', flt_outcome = outcome)
 
 
 

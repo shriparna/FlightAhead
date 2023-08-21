@@ -43,6 +43,8 @@ main {
   #chart1, #chart2, #chart3, #chart4 {
     width:100%
   }
+  
+ 
   /*
   /* clearfix 
   .container:after {
