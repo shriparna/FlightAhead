@@ -1,13 +1,40 @@
-let origin = document.getElementById("origin");
-let dest = document.getElementById("dest");
-let airline = document.getElementById("airline");
-let timeofday = document.getElementById("timeofday");
-let dayofweek = document.getElementById("weekday");
-let season = document.getElementById("season");
-queryURL = "localhost:5000/api/v1.0/flightPredict/"+timeoday+"/"+weekday+"/"+season+"/"+airline+"/"+origin+"/"+dest;
-d3.json(queryUrl).then(function (data) {
 
-});
+function getPrediction() {
+
+let s = document.getElementById("originselect");
+
+let origin = s.options[s.selectedIndex].value;
+
+let d = document.getElementById("destselect");
+let dest = d.options[d.selectedIndex].value;
+
+let a = document.getElementById("airlineselect");
+let airline = a.options[a.selectedIndex].value;
+
+let t = document.getElementById("timeofdayselect");
+let timeofday = t.options[t.selectedIndex].value;
+
+let w = document.getElementById("weekdayselect");
+let weekday = w.options[w.selectedIndex].value;
+
+let se = document.getElementById("seasonselect");
+let season = se.options[se.selectedIndex].value;
+
+let p = document.getElementById("prediction");
+let mapviz = document.getElementById("viz1692485047630");
+
+queryURL = "/api/v1.0/flightPredict/"+timeofday+"/"+weekday+"/"+season+"/"+airline+"/"+origin+"/"+dest;
 
 
+d3.json(queryURL).then(function (data) {
+     console.log(data['flt_delay'],data['probability'])
+     let pred = data['flt_delay']
+     let prob = data['probability']
+     p.innerText="There is a "+ (prob*100).toFixed(2) +"% probability of your flight being " + pred ;
+     
+ });
+
+console.log("Done!");
+
+}
 
