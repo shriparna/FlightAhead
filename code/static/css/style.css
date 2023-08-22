@@ -98,6 +98,8 @@ main {
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  display:flex;
+  align-items:center;
 }
 
 /* Apply styles when the select element receives focus */
@@ -149,15 +151,22 @@ main {
     margin: 0 auto;
   }
 
- 
-
+ #prediction{
+  text-align: center;
+ }
+ .color-red{
+  color: #F00;
+}
+.color-blue {
+  color:blue
+}
   
   
   /* CSS */
   .button-9 {
     appearance: button;
     backface-visibility: hidden;
-    background-color: #405cf5;
+    background-color: #287eeee8;
     border-radius: 6px;
     border-width: 0;
     box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
@@ -166,7 +175,7 @@ main {
     cursor: pointer;
     font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
     font-size: 100%;
-    height: 44px;
+    height: 34px;
     line-height: 1.15;
     margin: 12px 0 0;
     outline: none;
