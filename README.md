@@ -44,12 +44,13 @@ Project 4: FlightAhead
     - [Master Data Flights_2018.csv](https://github.com/shriparna/FlightAhead/blob/main/Data_files/Master%20Data%20Flights_2018.csv) - 2018 filght data merged with origin and destination latitude and longitude
     - [REV3_2018_cleaned_delays.csv](https://github.com/shriparna/FlightAhead/blob/main/Data_files/REV3_2018_cleaned_delays.csv) - 2018 flight data for top 5 airline and origin and destination cleaned and scaled
     - [Weather_data_top_5_stations.csv](https://github.com/shriparna/FlightAhead/blob/main/Data_files/Weather_data_top_5_stations.csv) - Weather data for origin and destination airports
+    - [2018.csv](https://www.kaggle.com/datasets/yuanyuwendymu/airline-delay-and-cancellation-data-2009-2018?select=2018.csv) The data file is of 1GB+ size so giving here the Kaggle link from where we used the data
 - [model](https://github.com/shriparna/FlightAhead/tree/main/model) - Directory to store ML models
     - [Flights18.sav](https://github.com/shriparna/FlightAhead/blob/main/model/Flights18.sav) Random Forest Classifier model pickle file
     - [Flights18_gbt_tuned.sav](https://github.com/shriparna/FlightAhead/blob/main/model/Flights18_gbt_tuned.sav) Gradient Boosted Trees model pickle file
     - Note: Flights18_RFC.sav file could not be uploaded as the size of the file was above 500MB
 - [presentation](https://github.com/shriparna/FlightAhead/tree/main/presentation) - Directory to store presentation
-    - [FlightAhead_ Predicting Flight Delays _ Project 04, Group 04 _ UCB Data Boot Camp (Aug 2023) .pptx](https://github.com/shriparna/FlightAhead/blob/main/presentation/FlightAhead_%20Predicting%20Flight%20Delays%20_%20Project%2004%2C%20Group%2004%20_%20UCB%20Data%20Boot%20Camp%20(Aug%202023)%20.pptx) Presentation file
+    - [FlightAhead: Predicting Flight Delays | Project 04, Group 04](https://github.com/shriparna/FlightAhead/blob/main/presentation/FlightAhead_%20Predicting%20Flight%20Delays%20_%20Project%2004%2C%20Group%2004%20_%20UCB%20Data%20Boot%20Camp%20(Aug%202023)%20.pptx) Presentation file
 
 <hr>
 
