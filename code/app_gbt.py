@@ -218,7 +218,8 @@ def flightPredict(timeofday,weekday,season,airline, origin, dest):
 
     delay =  flight_model.predict(features_df)
     delay_probabilities = flight_model.predict_proba(features_df)
-    if delay_probabilities[0][0] > 0.65:
+    print(delay_probabilities)
+    if delay_probabilities[0][0] > delay_probabilities[0][1]:
         outcome = {'flt_delay': "on time", 'probability': delay_probabilities[0][0]}
     else:
         outcome = {'flt_delay': "delayed", 'probability': delay_probabilities[0][1]}

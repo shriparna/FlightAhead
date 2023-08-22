@@ -6,10 +6,6 @@
 
 <head>
     <title>Flight Ahead</title>
-    <!--- Leaflet CSS
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-        crossorigin="" />  --->
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
@@ -27,19 +23,19 @@
         </div>
         <div class="row">
             <div class="col-md-2">
-                <h5>Origin</h5>
+                <h5><b>Origin</b></h5>
             </div>
             <div class="col-md-4">
                 <select class="form-control" id="originselect" >
                     <option value="ATL" selected>Atlanta - ATL</option>
-                    <option value="CLT">Charlotte - DEN</option>
+                    <option value="CLT">Charlotte - CLT</option>
                     <option value="ORD">Chicago - ORD</option>
                     <option value="DFW">Dallas/Fort Worth - DFW </option>
                     <option value="DEN">Denver - DEN</option>
                 </select>
             </div>
             <div class="col-md-3">
-                <h5>Time of Day</h5>
+                <h5><b>Time of Day</b></h5>
             </div>
             <div class="col-md-3">
                 <select class="form-control" id="timeofdayselect" >
@@ -52,7 +48,7 @@
         </div>
         <div class="row">
             <div class="col-md-2">
-                <h5>Destination</h5>
+                <h5><b>Destination</b></h5>
             </div>
             <div class="col-md-4">
                 <select class="form-control" id="destselect" >
@@ -64,7 +60,7 @@
                 </select>
             </div>
             <div class="col-md-3">
-                <h5>Day of week</h5>
+                <h5><b>Day of week</b></h5>
             </div>
             <div class="col-md-3">
                     <select class="form-control" id="weekdayselect" >
@@ -80,7 +76,7 @@
         </div>
         <div class="row">
             <div class="col-md-2">
-                <h5>Airline</h5>
+                <h5><b>Airline</b></h5>
             </div>
             <div class="col-md-4">
                 <select class="form-control" id="airlineselect" >
@@ -92,7 +88,7 @@
                 </select>
             </div>
             <div class="col-md-3">
-                <h5>Season</h5>
+                <h5><b>Season</b></h5>
             </div>
             <div class="col-md-3">
                 <select class="form-control" id="seasonselect" >
@@ -103,18 +99,17 @@
                 </select>
             </div>
         </div>
-        <div class="col-md-2">
-           <!-- <button class="button-19" role="button" ondblclick = "getPrediction()"> Predict </button>
-             HTML !-->
-            <button class="button-9" role="button" onclick="getPrediction()">Predict</button>
-        </div>
-        <div class="col-md-10" id = "prediction"> Your flight is predicted to be - please click on the Predict button</div>
+            <div class="col-md-10" id="prediction">Please click on the Predict button</div>
+            <div class="col-md-2">
+                <button class="button-9" role="button" onclick="getPrediction()">Predict</button>
+            </div>
+                <p>&nbsp;</p>
             <div class="col-md-12">
                 <!-- The div that holds our map -->
                 <div class='tableauPlaceholder' id='viz1692485047630' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;QP&#47;QP4R8Z5F5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;QP4R8Z5F5' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;QP&#47;QP4R8Z5F5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1692485047630');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.4)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script></div>
                 
             </div>
-        </div>
+    </div>
 </body>
 
 <footer></footer>

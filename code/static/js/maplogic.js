@@ -1,6 +1,6 @@
-
 function getPrediction() {
 
+console.log("Here");
 let s = document.getElementById("originselect");
 
 let origin = s.options[s.selectedIndex].value;
@@ -30,8 +30,12 @@ d3.json(queryURL).then(function (data) {
      console.log(data['flt_delay'],data['probability'])
      let pred = data['flt_delay']
      let prob = data['probability']
-     p.innerText="There is a "+ (prob*100).toFixed(2) +"% probability of your flight being " + pred ;
-     
+     if (pred == "on time") {
+        p.innerHTML="<span class='color-blue'><b>There is a "+(prob*100).toFixed(2) +"% probability of your flight being " + pred + "</b></span>" ;
+     }
+     else {
+     p.innerHTML="<span class='color-red'><b>There is a "+(prob*100).toFixed(2) +"% probability of your flight being " + pred + "</b>" ;
+     }
  });
 
 console.log("Done!");
