@@ -50,7 +50,7 @@ Project 4: FlightAhead
     - [Flights18_gbt_tuned.sav](https://github.com/shriparna/FlightAhead/blob/main/model/Flights18_gbt_tuned.sav) Gradient Boosted Trees model pickle file
     - Note: Flights18_RFC.sav file could not be uploaded as the size of the file was above 500MB
 - [presentation](https://github.com/shriparna/FlightAhead/tree/main/presentation) - Directory to store presentation
-    - [FlightAhead: Predicting Flight Delays | Project 04, Group 04](https://github.com/shriparna/FlightAhead/blob/main/presentation/FlightAhead_%20Predicting%20Flight%20Delays%20_%20Project%2004%2C%20Group%2004%20_%20UCB%20Data%20Boot%20Camp%20(Aug%202023)%20.pptx) Presentation file
+    - [FlightAhead_ Predicting Flight Delays _ Project 04, Group 04.pptx](https://docs.google.com/presentation/d/1y7MM_9d3cm2tdMSaE-rkktSqniE2or8BjQnFMtFlTuI/edit?pli=1#slide=id.g275a37de113_0_344) Group Presentation Slides
 
 <hr>
 
